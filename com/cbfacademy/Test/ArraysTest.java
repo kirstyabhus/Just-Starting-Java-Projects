@@ -1,5 +1,7 @@
 package com.cbfacademy.Test;
 
+import java.util.Arrays;
+
 public class ArraysTest {
     public static void main(String[] args) {
 
@@ -27,6 +29,19 @@ public class ArraysTest {
         System.out.println(arrayFloat12[4]);
         System.out.println(arrayDouble5[4]);
         System.out.println(arrayBoolean6[4]);
+
+        
+        // initialise a matrix with the 4 arrays above
+        Object[] newMatrix = new Object[4];
+
+        // intialise each element of the matrix
+        newMatrix[0] = arrayInt8;
+        newMatrix[1] = arrayFloat12;
+        newMatrix[2] = arrayDouble5;
+        newMatrix[3] = arrayBoolean6;
+
+        // printing 2D array using Arrays.deepToString() method
+        System.out.println(Arrays.deepToString(newMatrix));
     }
 }
 
