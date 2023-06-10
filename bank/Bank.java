@@ -18,7 +18,7 @@ public class Bank {
             
             // if the account is a Current Account
             if (x instanceof CurrentAccount) {
-                // downcasting 
+                // downcasting -> casts the account to a CurrentAccount object
                 CurrentAccount currentAccountX = (CurrentAccount) x;
                 // get overdraft limit
                 double overdraftLimit = currentAccountX.getOverDraftLimit();
@@ -39,6 +39,7 @@ public class Bank {
 
                 // add interest to balance of the current Account
                 savingsAccountX.addInterest();
+                // addInterest() method will have access to the balance of the current item in the list
                 
                 System.out.println("New balance after interest: " + savingsAccountX.getBalance());
             }
@@ -47,7 +48,7 @@ public class Bank {
     }
     /* 
     // method to open Account
-    public ArrayList<Account> openAccount(ArrayList<Account> accountList) {
+    public void openAccount(ArrayList<Account> accountList) {
         return accountList;
     }
 
@@ -66,7 +67,7 @@ public class Bank {
        accounts.add(new SavingsAccount(40, "543657"));
        accounts.add(new CurrentAccount(-90, "254744"));
        accounts.add(new Account(35, "647574"));
-       accounts.add(new SavingsAccount(40, "25744"));
+       accounts.add(new SavingsAccount(50, "25744"));
        accounts.add(new CurrentAccount(-100, "87326"));
 
        updateAccounts(accounts);
