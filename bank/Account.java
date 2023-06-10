@@ -1,7 +1,8 @@
 package bank;
 
 public class Account {
-    private double balance;
+    // private double balance;
+    double balance;
     String accountNumber;
     double amount;
 
@@ -14,6 +15,11 @@ public class Account {
     // get the balance
     public double getBalance(){
         return balance;
+    }
+
+    // get the account number
+    public String getAccountNumber(){
+        return accountNumber;
     }
 
     // withdraw money (a setter)

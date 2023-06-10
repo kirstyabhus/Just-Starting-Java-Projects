@@ -9,10 +9,27 @@ public class SavingsAccount extends Account {
         super(balance, accountNumber);
     }
 
-    public void addInterest() {
-        // to get the (private) balance from the parent Account use the getBalance getter.
+    /* 
+    @Override
+    // deposit money (a setter)
+    public void deposit(double amount) {
         double balance = getBalance();
+        balance = addInterest(balance);
+    }
+    */
+
+    /* 
+    public double addInterest(double oldBalance) {
+        // to get the (private) balance from the parent Account use the getBalance getter.
         // add the interest to the balance
+        oldBalance = (interest * oldBalance) + oldBalance;
+        return oldBalance;
+    }
+    */
+
+    
+    public void addInterest() {
         balance = (interest * balance) + balance;
     }
+    
 }
