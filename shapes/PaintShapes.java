@@ -4,7 +4,7 @@ public class PaintShapes {
 
     public static void main(String[] args) {
         // create an instance (object) of the "Paint" class in order to access its non-static method (amount())
-        // without creating an inistance of the "Paint class, you can't access its methods
+        // without creating an inistance of the "Paint" class, you can't access its methods
         Paint paint = new Paint();
 
         // create objects
